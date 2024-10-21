@@ -1,0 +1,69 @@
+Ins practical 8 Firewall Configuration and Rule Based Filtering.
+ 
+Step 1 - in windows search - Search for 'Windows Firewall Settings'.
+
+Step 2 - after searching the above lookout for the 'Advanced Settings' Option in the side panel on the Left side.
+
+Step 3 - next you will have two options on the left side panel now namely "inbound rules and Outbound rules".
+
+Step 4 - click on inbound rules in the right hand side panel, you'll have a option for adding a new rule, click on it .
+
+Step 5 - after performing the step above a new window will pop up .
+
+Step 6 - in the "rule type" section select 'port' & click on 'next' .
+
+Step 7 - in the 'ports and protocol' section check if 'TCP' is selected and below it 'specific local ports' is selected.
+
+Step 8 - in the 'specific local ports' section enter 80,443 then click on 'next' .
+
+Step 9 - in the 'Action' section select  'block the connection' then click on 'next' .
+
+Step 10 - in the 'Profile' section check whether all three options are ticked and click on 'next'.
+
+Step 11 - in the 'Name' section give a name for your rule and click on Finish.
+
+Step 12 - We repeat all the above steps for creating ‘Outbound Rules’, and then try to access the internet. We see that the accessed is blocked
+
+
+
+
+
+
+
+part 2
+"BLOCKING A WEBSITE"
+
+
+STEP 1 - We open the browser and access ANY website, which is now accessible FOR EG:- www.android.com
+
+STEP 2 - We find the IP addresses of the website using the following command in Windows Command Prompt. 
+command- nslookup "website address"
+eg:- nslookup facebook.com
+
+AFTER EXECUTING THE COMMAND ABOVE YOU WILL GET THE IPV4 AND IPV6 FOR THE MENTIONED WEBSITE 
+
+FOR EG:-
+
+IPV4 - 216.58.196.68
+IPV6 - 2404:6800:4009:809::2004
+
+
+STEP 3 - We open the windows Firewall settings and apply the Inbound Rule
+
+STEP 4 - IN 'RULE TYPE' SELECT CUSTOM 
+
+STEP 5 - IN 'PROGRAM' SELECT 'ALL PROGRAM' AND CLICK ON NEXT.
+
+STEP 6 - IN 'PORTS AMD PROTOCOL' DONT CHANGE ANYTHING AND CLICK ON 'NEXT'
+
+STEP 7 - IN 'SCOPE' WHERE "WHICH REMOTE IP ADDRESSES DOES THIS APPLY TO?" IS WRITTEN SELECT 'THESE IP ADDRESSES'.
+
+STEP 8 - AFTER DOING THE ACTIONS IN STEP 7 CLICK ON ADD AND INSERT THE IPV4 AND IPV6 ADDRESSES AFTER THAT CLICK ON OK AND THEN NEXT.
+
+STEP 9 - IN 'ACTION' SELECT ON 'BLOCK THE CONNECTION' AND CLICK ON NEXT 
+
+STEP 10 - IN THE NEXT STEP GIVE A NAME TO THE CONNECTION.
+
+STEP 11 - IN THE FINAL STEP TRY TO ACCESS THE WEBSITE YOU HAVE BLOCKED.
+
+at last clear the cache on browser using ctrl+shift+del clear the cache and refresh the facebook.com

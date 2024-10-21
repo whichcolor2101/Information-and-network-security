@@ -1,0 +1,34 @@
+SERVER SIDE :-
+
+step 1 :-  sudo apt install snort
+
+ENTER THE IP ADDRESS AND ens33 
+
+step 2 :-  sudo gedit /etc/snort/snort.conf 
+
+step 3:- sudo gedit /etc/snort/snort.conf
+
+step 4 :- sudo gedit /etc/snort/rules/ftp.rules 
+
+step 5 :- sudo snort -T -c /etc/snort/snort.conf -i ens33
+
+CLIENT SIDE:-
+
+step 6:- sudo apt install nmap
+
+client ip 
+
+step 7 :-  nmap -Pn 192.168.93.135 
+
+
+SERVER SIDE :- 
+
+Step 8 :- 
+
+ sudo snort -A console -q -u snort -g snort -c /etc/snort/snort.conf 
+
+step 9:-
+
+sudo snort -A console -q -u snort -g snort -c /etc/snort/snort.conf -i ens33
+
+
